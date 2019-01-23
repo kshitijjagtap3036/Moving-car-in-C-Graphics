@@ -1,0 +1,41 @@
+#include<conio.h>
+#include<graphics.h>
+#include<dos.h>
+void main()
+{
+	int gd=DETECT,gm,i;
+	initgraph(&gd,&gm,"");
+	for(i=0;i<=500;i++)
+	{
+	settextstyle(DEFAULT_FONT,HORIZ_DIR,3);
+	outtextxy(50,100,"bhuunnngggggg bhuuunngggggg");
+	setcolor(WHITE);
+	line(20,320,650,320);
+	setcolor(RED);
+	rectangle(50+i,200,200+i,280);
+	setfillstyle(HATCH_FILL,RED);
+	floodfill(100+i,250,RED);
+	setcolor(YELLOW);
+	rectangle(160+i,180,200+i,200);
+	setfillstyle(SLASH_FILL,YELLOW);
+	floodfill(170+i,190,YELLOW);
+	setcolor(BLUE);
+	circle(70+i,300,20);
+	circle(70+i,300,14);
+	setfillstyle(SOLID_FILL,LIGHTMAGENTA);
+	floodfill(51+i,300,BLUE);
+	setfillstyle(HATCH_FILL,LIGHTGRAY);
+	floodfill(70+i,300,BLUE);
+	setcolor(BLUE);
+	circle(180+i,300,20);
+	circle(180+i,300,14);
+	setfillstyle(SOLID_FILL,LIGHTMAGENTA);
+	floodfill(161+i,300,BLUE);
+	setfillstyle(HATCH_FILL,LIGHTGRAY);
+	floodfill(180+i,300,BLUE);
+	delay(10);
+	cleardevice();
+	}
+	getch();
+	closegraph();
+}
